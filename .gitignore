@@ -1,0 +1,12 @@
+.DS_Store
+.node_history
+/.idea
+.npmrc
+.DS_Store
+.sass-cache
+.publish
+Desktop.ini
+node_modules
+**/generated/_icons.sass
+npm-debug.log
+.vscode/
