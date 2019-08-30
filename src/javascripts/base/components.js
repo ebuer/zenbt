@@ -21,10 +21,13 @@ let card_product = {
     data: () => {
         return {}
     },
+    created:function(){
+      example_images()
+    },
     template: '                                    <div class="zn-card list-item" data-link="#">\n' +
         '                                        <div class="left">\n' +
         '                                            <div class="img">\n' +
-        '                                                <img src="../uploads/game1.jpg" alt="game">\n' +
+        '                                                <img class="js-img-ex" src="../uploads/game1.jpg" alt="game">\n' +
         '                                            </div>\n' +
         '                                        </div>\n' +
         '                                        <div class="middle">\n' +
