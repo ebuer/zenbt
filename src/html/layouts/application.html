@@ -3,12 +3,53 @@
 <head>
     <meta charset="utf-8">
     <title>App</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/app.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div id="app">
-    {% block content %} {% endblock %}
+
+    <header class="zn-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light zn-navbar">
+                <a class="navbar-brand" href="#"><img src="../../images/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">STORE<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ABOUT<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">COMMUNITY<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SUPPORT<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink" href="#">SIGN IN<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <div class="app-content">
+        {% block content %} {% endblock %}
+    </div>
+
+    <footer></footer>
+
 </div>
 {% block javascript %}
 <script src="javascripts/app.js"></script>

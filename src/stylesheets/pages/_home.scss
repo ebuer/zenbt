@@ -1,0 +1,21 @@
+.zn-page {
+  &.home {
+    .section-highlights {
+      .middle {
+        margin-top: 41px;
+      }
+    }
+
+    .section-games {
+      .discover {
+        .inner {
+          .list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

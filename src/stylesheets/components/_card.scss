@@ -1,0 +1,220 @@
+$img_height: 116px;
+
+
+.zn-card {
+  display: block;
+  text-decoration: none !important;
+  color: black;
+
+  &:hover {
+    color: black;
+  }
+
+  &.basic {
+    &.auto-height {
+      height: 100%;
+    }
+
+    .img {
+      height: $img_height;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .body {
+      background: white;
+
+      .title {
+        padding: 8px 16px 0;
+        height: 38px;
+        font-size: 14px;
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+
+        .platform {
+          .icon {
+            color: rgb(153, 153, 153);
+            font-size: 11px;
+          }
+        }
+
+        .price {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .discount {
+            background: rgb(120, 56, 123);
+            margin-right: 3px;
+            border-radius: 2px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 12px;
+            padding: 7px 6px;
+          }
+
+          .current-price {
+            margin-right: 3px;
+            font-size: 16px;
+          }
+
+          .add-to-cart {
+            position: relative;
+            z-index: 99;
+            display: none;
+
+            .add-btn {
+              outline: none;
+              border: 1px solid #7fab34;
+              border-radius: 3px;
+              width: 28px;
+              height: 25px;
+              cursor: pointer;
+              background-image: linear-gradient(180deg, #a5c700, #86b300);
+              box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .35);
+              color: white;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .info {
+        .add-to-cart {
+          display: block !important;
+        }
+
+        .platform {
+          .icon {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+
+  &.list-item {
+    height: 76px;
+    width: 100%;
+    display: flex;
+    //justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px;
+
+    &:hover {
+      background: #ffffff;
+    }
+
+    .left {
+      .img {
+        max-width: 130px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .middle {
+      padding-left: 15px;
+
+      .info {
+        .title {
+          font-size: 14px;
+          color: #404040;
+          margin: 0;
+          padding: 0;
+        }
+
+        .platform-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            .icon {
+              color: #999999;
+              font-size: 11px;
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      padding-left: 15px;
+      padding-right: 5px;
+      margin-left: auto;
+
+      .price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .discount {
+          background: rgb(120, 56, 123);
+          margin-right: 3px;
+          border-radius: 2px;
+          color: #fff;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 12px;
+          padding: 7px 6px;
+        }
+
+        .current-price {
+          margin-right: 3px;
+          font-size: 16px;
+        }
+
+        .add-to-cart {
+          position: relative;
+          z-index: 99;
+          display: none;
+
+          .add-btn {
+            outline: none;
+            border: 1px solid #7fab34;
+            border-radius: 3px;
+            width: 28px;
+            height: 25px;
+            cursor: pointer;
+            background-image: linear-gradient(180deg, #a5c700, #86b300);
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .35);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+    }
+
+    &:hover {
+      .right {
+        .add-to-cart {
+          display: block !important;
+        }
+
+        .platform-list {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
