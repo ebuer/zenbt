@@ -1,3 +1,5 @@
+@import "../mixins/index";
+
 $img_height: 116px;
 
 
@@ -106,21 +108,26 @@ $img_height: 116px;
   }
 
   &.list-item {
-    height: 76px;
+    height: $list-card-height;
     width: 100%;
     display: flex;
     //justify-content: space-between;
     align-items: center;
     cursor: pointer;
     padding: 8px;
+    border-bottom: 1px solid #ccc;
 
     &:hover {
       background: #ffffff;
     }
 
     .left {
+      height: 100%;
+
       .img {
         max-width: 130px;
+        height: 100%;
+        overflow: hidden;
 
         img {
           width: 100%;
@@ -216,5 +223,53 @@ $img_height: 116px;
         }
       }
     }
+  }
+
+  &.news {
+    padding: 0 16px 12px;
+    height: 252px;
+    opacity: 1;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .15);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    color: #fff;
+    transition: opacity .3s ease-in-out;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+
+    .overlay-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #000000;
+      opacity: 0.3;
+      transition: all 300ms ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    .info {
+      width: 100%;
+
+      .title {
+        margin-bottom: 18px;
+        font-size: 20px;
+        line-height: 20px;
+        width: 100%;
+      }
+
+      .time {
+        float: right;
+        font-size: 13px;
+      }
+    }
+
+
   }
 }

@@ -17,7 +17,6 @@ let app = new Vue({
         axios.get('https://jsonplaceholder.typicode.com/users')
             .then(res => {
                 self.gameList = res.data
-                console.log(self.gameList)
             })
     }
 });
