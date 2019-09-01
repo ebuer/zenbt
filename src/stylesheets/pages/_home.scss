@@ -1,7 +1,35 @@
 @import "../mixins/index";
 .zn-page {
+  padding-top: 60px;
   &.home {
     .section-highlights {
+      .top {
+        .slider {
+          .owl-stage-outer {
+            overflow: visible;
+          }
+          .owl-nav {
+            .owl-prev {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              color: #ffffff;
+              font-size: 50px;
+              outline: none;
+            }
+            .owl-next {
+              position: absolute;
+              top: 50%;
+              right: 0;
+              transform: translateY(-50%);
+              color: #ffffff;
+              font-size: 50px;
+              outline: none;
+            }
+          }
+        }
+      }
       .middle {
         margin-top: 41px;
       }
@@ -9,7 +37,35 @@
 
     .section-games {
       .discover {
+        .zn-section-title {
+          transform: translateY(53px);
+        }
         .inner {
+          transform: translateY(-53px);
+          .nav-pills {
+            justify-content: flex-end;
+            .nav-item {
+              margin-left: 24px;
+
+              .nav-link {
+                opacity: .82;
+                cursor: pointer;
+                color: #595959;
+                white-space: nowrap;
+                fill: #595959;
+                background-color: transparent;
+                padding: 0 0 11px 0;
+                border-radius: 0;
+                &.active {
+                  margin-bottom: -2px;
+                  border-bottom: 3px solid #86328a;
+                  opacity: 1;
+                  color: #86328a;
+                  fill: #86328a;
+                }
+              }
+            }
+          }
           .list {
             list-style: none;
             padding: 0;

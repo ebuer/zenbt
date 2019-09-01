@@ -1,4 +1,5 @@
 import '../../node_modules/bootstrap/dist/js/bootstrap.bundle'
+import '../../node_modules/owl.carousel/dist/owl.carousel'
 import './base/vue'
 
 
@@ -50,3 +51,20 @@ window.example_images = () => {
 }
 auto_height()
 example_images();
+
+
+setTimeout(function () {
+    $(document).ready(function(){
+        $('.js-slider').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                }
+            }
+        })
+    });
+
+})
